@@ -1,0 +1,73 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyPkSd3DHJ+OVOB4jlpgnCc3",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/sangeethaanalytics/Python-coding-challenge/blob/main/python%20programming\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "sXXy82ew-B1D"
+      },
+      "outputs": [],
+      "source": [
+        " # Introduction to Programming Languages and Python\n",
+        " # Project Title: Student Profile Creator\n",
+        "# Scenario:\n",
+        " # You are helping to build a basic student information system for a local school. The school wants to store some basic details about each student and let them update their interests.\n",
+        "#Tasks:\n",
+        "#Create variables to store the student’s name, age, and their favourite subjects they are enrolled in.\n",
+        "# Display the student’s information in a user-friendly format.\n",
+        "# Display the updated list of subjects."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "\n",
+        "Students_information=(\"prithi\",9,\"maths\"),(\"riya\",5,\"science\"),(\"subhi\",4,\"english\")\n",
+        "print(Students_information)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "BXOi_mP7-W5H",
+        "outputId": "3f06c621-aa00-472c-ff84-2cf05470dcd7"
+      },
+      "execution_count": 4,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "(('prithi', 9, 'maths'), ('riya', 5, 'science'), ('subhi', 4, 'english'))\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
