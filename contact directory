@@ -1,0 +1,112 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyOpKROdRBCzcRBkQtdoKb6t",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/sangeethaanalytics/Python-coding-challenge/blob/main/contact%20directory\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 1,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "ijjqAX0RBfQQ",
+        "outputId": "25872380-b02f-4851-d28d-b8d8df391d81"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter contact name: subhiksha\n",
+            "Enter phone number: 8220627354\n",
+            "Enter email address: subi@gmail.com\n",
+            "\n",
+            "Contact added successfully!\n",
+            "\n",
+            "----- All Contacts (Sorted) -----\n",
+            "Name: Karan, Phone: 9988776655, Email: karan@yahoo.com\n",
+            "Name: Riya, Phone: 9123456780, Email: riya@gmail.com\n",
+            "Name: Sangeetha, Phone: 9876543210, Email: sangee@example.com\n",
+            "Name: subhiksha, Phone: 8220627354, Email: subi@gmail.com\n",
+            "\n",
+            "----- First 3 Contacts -----\n",
+            "Name: Karan, Phone: 9988776655, Email: karan@yahoo.com\n",
+            "Name: Riya, Phone: 9123456780, Email: riya@gmail.com\n",
+            "Name: Sangeetha, Phone: 9876543210, Email: sangee@example.com\n",
+            "\n",
+            "Enter name to search: sangeetha\n",
+            "\n",
+            "----- Search Results -----\n",
+            "Name: Sangeetha, Phone: 9876543210, Email: sangee@example.com\n"
+          ]
+        }
+      ],
+      "source": [
+        "# Initial 2D contact list\n",
+        "contacts = [\n",
+        "    [\"Sangeetha\", \"9876543210\", \"sangee@example.com\"],\n",
+        "    [\"Riya\", \"9123456780\", \"riya@gmail.com\"],\n",
+        "    [\"Karan\", \"9988776655\", \"karan@yahoo.com\"]\n",
+        "]\n",
+        "\n",
+        "# 1. Add a new contact\n",
+        "name = input(\"Enter contact name: \")\n",
+        "phone = input(\"Enter phone number: \")\n",
+        "email = input(\"Enter email address: \")\n",
+        "\n",
+        "contacts.append([name, phone, email])\n",
+        "\n",
+        "print(\"\\nContact added successfully!\\n\")\n",
+        "\n",
+        "# 2. Sort contacts alphabetically by name\n",
+        "contacts.sort(key=lambda x: x[0])\n",
+        "\n",
+        "print(\"----- All Contacts (Sorted) -----\")\n",
+        "for c in contacts:\n",
+        "    print(f\"Name: {c[0]}, Phone: {c[1]}, Email: {c[2]}\")\n",
+        "\n",
+        "# 3. Display only the first 3 contacts\n",
+        "print(\"\\n----- First 3 Contacts -----\")\n",
+        "for c in contacts[:3]:\n",
+        "    print(f\"Name: {c[0]}, Phone: {c[1]}, Email: {c[2]}\")\n",
+        "\n",
+        "# 4. Search contacts (partial match)\n",
+        "search_term = input(\"\\nEnter name to search: \").lower()\n",
+        "\n",
+        "print(\"\\n----- Search Results -----\")\n",
+        "found = False\n",
+        "for c in contacts:\n",
+        "    if search_term in c[0].lower():   # partial match\n",
+        "        print(f\"Name: {c[0]}, Phone: {c[1]}, Email: {c[2]}\")\n",
+        "        found = True\n",
+        "\n",
+        "if not found:\n",
+        "    print(\"No matching contacts found.\")\n"
+      ]
+    }
+  ]
+}
